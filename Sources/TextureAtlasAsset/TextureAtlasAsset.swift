@@ -1,5 +1,4 @@
-import Asset
-import ImageAsset
+import CompositeImageAsset
 import UniqueIdentifierProvider
 
 /// Represents one texture atlas within a game editor's asset library.
@@ -9,7 +8,7 @@ import UniqueIdentifierProvider
 /// until the asset is exported for runtime (game) use. Likewise, in-editor preview of sprites
 /// textured with the atlas is done by assigning the individual image whole; no "shared texture"
 /// exists yet and no texture coordinate mapping takes place.
-public final class TextureAtlasAsset: CompositeAsset {
+public final class TextureAtlasAsset: CompositeImageAsset {
 
   public typealias Options = TextureAtlasOptions
 
@@ -46,9 +45,10 @@ public final class TextureAtlasAsset: CompositeAsset {
 // MARK: - Supporting Types
 
 /// Groups the intialization options for a texture atlas.
-public struct TextureAtlasOptions: CompositeAssetOptions {
+public struct TextureAtlasOptions: CompositeImageAssetOptions {
 
   public let name: String
+
   public let scaleFactor: Float
 
   public init(name: String, scaleFactor: Float) {
