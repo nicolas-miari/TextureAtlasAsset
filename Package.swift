@@ -15,7 +15,7 @@ let package = Package(
       targets: ["TextureAtlasAsset"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/nicolas-miari/CompositeImageAsset.git", from: "1.0.1"),
+    .package(url: "https://github.com/nicolas-miari/CompositeImageAsset.git", from: "1.0.2"),
     .package(url: "https://github.com/nicolas-miari/UniqueIdentifierProvider.git", from: "0.0.1"),
   ],
   targets: [
